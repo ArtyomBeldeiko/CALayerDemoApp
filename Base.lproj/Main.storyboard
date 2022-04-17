@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="egQ-yC-CP9">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CALayerDemoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="43a-Cr-Riz" customClass="CustomUIButton" customModule="CALayerDemoApp" customModuleProvider="target">
+                                <rect key="frame" x="41" y="684" width="333" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="xn8-ns-RKO"/>
+                                </constraints>
+                                <color key="tintColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Payday">
+                                            <attributes>
+                                                <font key="NSFont" size="24" name="Avenir-Heavy"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="32"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="paydayButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hqF-Lx-9Uo"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="man-3207968_1280" translatesAutoresizingMaskIntoConstraints="NO" id="6vq-ss-xID">
+                                <rect key="frame" x="20" y="88" width="374" height="374"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="374" id="Z1C-2R-qqs"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6vq-ss-xID" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="JGu-j9-Zy0"/>
+                            <constraint firstItem="43a-Cr-Riz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="41" id="bex-Pg-ny5"/>
+                            <constraint firstItem="43a-Cr-Riz" firstAttribute="top" secondItem="6vq-ss-xID" secondAttribute="bottom" constant="222" id="ipS-D6-S1x"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="43a-Cr-Riz" secondAttribute="trailing" constant="40" id="je0-n6-VqJ"/>
+                            <constraint firstItem="6vq-ss-xID" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="pFM-C4-JdE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6vq-ss-xID" secondAttribute="trailing" constant="20" id="pXf-Bt-JUe"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="oVL-j9-Ylk"/>
+                    <connections>
+                        <outlet property="imageView" destination="6vq-ss-xID" id="QeQ-4t-bM5"/>
+                        <outlet property="paydayButton" destination="43a-Cr-Riz" id="s5L-Lv-npm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="730" y="70"/>
+        </scene>
+        <!--Loading View Controller-->
+        <scene sceneID="qq6-US-Z1B">
+            <objects>
+                <viewController storyboardIdentifier="LoadingViewController" id="bE4-iI-kdf" customClass="LoadingViewController" customModule="CALayerDemoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xK0-kz-CAa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="B7V-xE-YhB"/>
+                        <color key="backgroundColor" red="0.0" green="0.78031018902672933" blue="0.80285274621212122" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gho-9E-cUM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1090" y="732"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="C1l-A4-l7t">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" id="nOD-OE-pds" customClass="SecondViewController" customModule="CALayerDemoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7Gd-Al-49L">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hP8-Ar-8XU" customClass="CustomUIButton" customModule="CALayerDemoApp" customModuleProvider="target">
+                                <rect key="frame" x="36" y="683" width="343" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="uak-ut-8oa"/>
+                                </constraints>
+                                <color key="tintColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Take salary!">
+                                            <attributes>
+                                                <font key="NSFont" size="24" name="Avenir-Heavy"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="82"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="takeSalaryButtonClicked:" destination="nOD-OE-pds" eventType="touchUpInside" id="zZC-4T-Crh"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1140-dollar-on-calendar-keyhole" translatesAutoresizingMaskIntoConstraints="NO" id="wJA-d6-clg">
+                                <rect key="frame" x="23" y="62" width="369" height="369"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="369" id="X4r-C5-3nM"/>
+                                </constraints>
+                            </imageView>
+                            <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="slL-N7-zIJ" customClass="CustomUIView" customModule="CALayerDemoApp" customModuleProvider="target">
+                                <rect key="frame" x="23" y="471" width="60" height="60"/>
+                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="9z4-wf-3N9"/>
+                                    <constraint firstAttribute="width" constant="60" id="Imi-Eq-gjf"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiiSize">
+                                        <real key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gqO-Ci-GJ0" customClass="CustomUIView" customModule="CALayerDemoApp" customModuleProvider="target">
+                                <rect key="frame" x="243" y="756" width="85" height="85"/>
+                                <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="231-uw-7B4"/>
+                                    <constraint firstAttribute="width" constant="85" id="vGh-Ta-qT0"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiiSize">
+                                        <real key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2La-Mv-Ytk" customClass="CustomUIView" customModule="CALayerDemoApp" customModuleProvider="target">
+                                <rect key="frame" x="279" y="512" width="120" height="120"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="HKS-tB-TW4"/>
+                                    <constraint firstAttribute="width" constant="120" id="kY4-DY-EdC"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiiSize">
+                                        <real key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view alpha="0.40000000596046448" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5qK-7l-jq3" customClass="CustomUIView" customModule="CALayerDemoApp" customModuleProvider="target">
+                                <rect key="frame" x="23" y="812" width="50" height="50"/>
+                                <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="P6d-Bb-2AR"/>
+                                    <constraint firstAttribute="height" constant="50" id="e7w-Co-RJA"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiiSize">
+                                        <real key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8L8-QG-KCg" customClass="CustomUIView" customModule="CALayerDemoApp" customModuleProvider="target">
+                                <rect key="frame" x="195" y="825" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiiSize">
+                                        <real key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view alpha="0.65000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pdJ-ry-o7f" customClass="CustomUIView" customModule="CALayerDemoApp" customModuleProvider="target">
+                                <rect key="frame" x="111" y="768" width="25" height="25"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="0fr-LE-b8u"/>
+                                    <constraint firstAttribute="height" constant="25" id="7xd-U4-Y2p"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiiSize">
+                                        <real key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IWq-6b-fCv" customClass="CustomUIView" customModule="CALayerDemoApp" customModuleProvider="target">
+                                <rect key="frame" x="98" y="589" width="70" height="70"/>
+                                <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="Eid-Gz-cK9"/>
+                                    <constraint firstAttribute="height" constant="70" id="qm2-J8-MUh"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiiSize">
+                                        <real key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Kz-in-LMT" customClass="CustomUIView" customModule="CALayerDemoApp" customModuleProvider="target">
+                                <rect key="frame" x="195" y="528" width="25" height="25"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="BsX-R2-Ahj"/>
+                                    <constraint firstAttribute="height" constant="25" id="Jca-p9-Hjs"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiiSize">
+                                        <real key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view alpha="0.14999999999999999" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ozd-Qp-Wq0" customClass="CustomUIView" customModule="CALayerDemoApp" customModuleProvider="target">
+                                <rect key="frame" x="344" y="825" width="50" height="50"/>
+                                <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="EbA-nR-3cz"/>
+                                    <constraint firstAttribute="width" constant="50" id="MUQ-AZ-ZjB"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiiSize">
+                                        <real key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kEH-iu-flt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kEH-iu-flt" firstAttribute="trailing" secondItem="hP8-Ar-8XU" secondAttribute="trailing" constant="35" id="2An-Is-rjL"/>
+                            <constraint firstItem="IWq-6b-fCv" firstAttribute="leading" secondItem="kEH-iu-flt" secondAttribute="leading" constant="98" id="BGU-L6-RyS"/>
+                            <constraint firstItem="Ozd-Qp-Wq0" firstAttribute="top" secondItem="hP8-Ar-8XU" secondAttribute="bottom" constant="88" id="BoZ-Lo-xei"/>
+                            <constraint firstItem="hP8-Ar-8XU" firstAttribute="leading" secondItem="kEH-iu-flt" secondAttribute="leading" constant="36" id="C2c-pZ-0hT"/>
+                            <constraint firstItem="IWq-6b-fCv" firstAttribute="top" secondItem="wJA-d6-clg" secondAttribute="bottom" constant="158" id="Eoc-Qh-bqB"/>
+                            <constraint firstItem="slL-N7-zIJ" firstAttribute="leading" secondItem="kEH-iu-flt" secondAttribute="leading" constant="23" id="HFx-Ar-lxj"/>
+                            <constraint firstItem="wJA-d6-clg" firstAttribute="leading" secondItem="kEH-iu-flt" secondAttribute="leading" constant="23" id="JKh-nC-bT5"/>
+                            <constraint firstItem="kEH-iu-flt" firstAttribute="trailing" secondItem="gqO-Ci-GJ0" secondAttribute="trailing" constant="86" id="KF5-b2-Ta4"/>
+                            <constraint firstItem="2La-Mv-Ytk" firstAttribute="top" secondItem="wJA-d6-clg" secondAttribute="bottom" constant="81" id="Nc4-QZ-H9n"/>
+                            <constraint firstItem="slL-N7-zIJ" firstAttribute="top" secondItem="wJA-d6-clg" secondAttribute="bottom" constant="40" id="Smq-9g-eF8"/>
+                            <constraint firstItem="1Kz-in-LMT" firstAttribute="leading" secondItem="kEH-iu-flt" secondAttribute="leading" constant="195" id="Uqk-Vw-vnU"/>
+                            <constraint firstItem="kEH-iu-flt" firstAttribute="bottom" secondItem="gqO-Ci-GJ0" secondAttribute="bottom" constant="21" id="XpX-hl-a7A"/>
+                            <constraint firstItem="5qK-7l-jq3" firstAttribute="top" secondItem="hP8-Ar-8XU" secondAttribute="bottom" constant="75" id="ZBb-LM-GYD"/>
+                            <constraint firstItem="kEH-iu-flt" firstAttribute="trailing" secondItem="wJA-d6-clg" secondAttribute="trailing" constant="22" id="ZhX-0r-Tfe"/>
+                            <constraint firstItem="2La-Mv-Ytk" firstAttribute="leading" secondItem="1Kz-in-LMT" secondAttribute="trailing" constant="59" id="gat-RB-19J"/>
+                            <constraint firstItem="pdJ-ry-o7f" firstAttribute="leading" secondItem="kEH-iu-flt" secondAttribute="leading" constant="111" id="gxs-Ei-xZj"/>
+                            <constraint firstItem="hP8-Ar-8XU" firstAttribute="top" secondItem="wJA-d6-clg" secondAttribute="bottom" constant="252" id="hwr-7x-HeA"/>
+                            <constraint firstItem="1Kz-in-LMT" firstAttribute="top" secondItem="wJA-d6-clg" secondAttribute="bottom" constant="97" id="lW4-sj-uSv"/>
+                            <constraint firstItem="pdJ-ry-o7f" firstAttribute="top" secondItem="hP8-Ar-8XU" secondAttribute="bottom" constant="31" id="sup-yd-WYq"/>
+                            <constraint firstItem="5qK-7l-jq3" firstAttribute="leading" secondItem="kEH-iu-flt" secondAttribute="leading" constant="23" id="uYh-ce-kWU"/>
+                            <constraint firstItem="wJA-d6-clg" firstAttribute="top" secondItem="kEH-iu-flt" secondAttribute="top" constant="18" id="y0g-in-gwp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="wJA-d6-clg" id="6YO-YJ-dt9"/>
+                        <outlet property="takeSalaryButton" destination="hP8-Ar-8XU" id="rgk-Fl-2JR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tyD-9E-lBK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1464" y="70"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xqm-3e-F0M">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="egQ-yC-CP9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qGS-jE-fhu">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="j24-3m-fgx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aio-m8-ZQu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="69.642857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="1140-dollar-on-calendar-keyhole" width="1140" height="655"/>
+        <image name="man-3207968_1280" width="1280" height="924"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
